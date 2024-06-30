@@ -1,0 +1,37 @@
+---
+title:  "손실함수"
+date:   2024-06-13 10:04:23
+categories: [하미퍼파라미터]
+tags: [하미퍼파라미터]
+---
+머신러닝은 타깃과 예측값의 오차를 최소화하는 방향으로 모델의 파라미터들을 조정하여 가장 알맞은(오차가 가장 작은) 모델을 찾아내는 것이라 할 수 있다. 오차는 알고리즘이 예측한 값과 실제 정답과의 차이를 의미한다. 즉, 알고리즘이 정답을 잘 맞출수록 오차가 줄어들기 때문에 성능이 좋다고 볼 수 있다.
+
+이때 오차를 구하는 함수를 손실 함수라 한다. 손실 함수는 여러 종류가 있다.
+
+<h3>평균 제곱 오차 (Mean Squre Error, MSE)</h3>  
+
+평균 제곱 오차(Mean Squared Error, MSE)는 오차(error)를 제곱한 값의 평균이다.
+
+<p align="center"><img src="{{ site.baseurl }}/images/2024/09손실함수/1.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';" width="200px"></p>  
+
+평균 제곱 오차 그래프
+<p align="center"><img src="{{ site.baseurl }}/images/2024/09손실함수/1-1.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';" width="600px"></p>  
+
+<h3>평균 제곱근 오차 (Root Mean square Error, RMSE) </h3>  
+
+평균 제곱근 오차(Root Mean square Error)는 평균 제곱 오차의 값에 Root 연산을 수행한 것을 말한다.
+
+<p align="center"><img src="{{ site.baseurl }}/images/2024/09손실함수/2.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';" width="200px"></p>  
+
+<h3>이진 교차 엔트로피 ( Binary Cross-entropy)</h3>  
+
+이진 크로스 엔트로피(Binary Cross Entropy)는 두 클래스를 가진 이진 분류 문제에 특화된 손실 함수다. 이는 실제 레이블과 모델이 예측한 두 클래스가 속할 확률 사이의 불일치를 측정한다.  
+
+<p align="center"><img src="{{ site.baseurl }}/images/2024/09손실함수/3.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';" width="400px"></p>  
+
+<h3>카테고리컬 교차 엔트로피 ( Categorical Cross-entropy)</h3>  
+
+카테고리컬 교차 엔트로피(Categorical Cross-Entropy, CCE)는 다중 클래스 분류 문제에서 자주 사용되는 손실 함수다. 이 함수는 모델의 예측 확률 분포와 실제 레이블 간의 차이를 측정하여 모델의 성능을 평가한다. CCE는 여러 클래스 중 하나를 예측하는 문제에서 특히 유용하다.
+
+<p align="center"><img src="{{ site.baseurl }}/images/2024/09손실함수/4.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';" width="200px"></p>  
+

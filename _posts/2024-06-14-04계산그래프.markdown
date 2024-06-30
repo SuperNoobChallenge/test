@@ -1,0 +1,25 @@
+---
+title:  "계산그래프"
+date:   2024-06-13 10:04:23
+categories: [수학]
+tags: [수학]
+---
+계산 그래프는 계산 과정을 노드와 화살표(에지)로 표현한다. 노드는 원으로 표기하고 원 안에 연산 내용을 적는다. 계산 결과는 화살표 위에 적어 왼쪽에서 오른쪽으로 전해지게 한다.   
+
+예시 1) 수퍼에서 1개에 100원인 사과를 2개, 귤을 3개 샀습니다. 사과는 1개에 100원, 귤은 1개 150원입니다. 소비세가 10%일 때 지불 금액을 구하세요.  
+
+<p align="center"><img src="{{ site.baseurl }}/images/2024/04계산그래프/1.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';"></p>  
+
+<h3>국소적 계산</h3>  
+
+국소적 계산이란 전체에 어떤 일이 벌어지든 상관없이 자신과 관계된 정보만으로 결과를 출력하는 것을 말한다.  
+
+수퍼에서 사과 2개를 포함하여 여러 식품을 구입하는 경우를 생각해보자. 여러 식품을 구입하여 총 금액이 4000원이 되었으면. 사과와 구입한 금액을 더하는 계산은 다른 식품들이 어떻게 계산되었는지 상관하지 않고 사과값과 4000원을 더하면 된다는 것이 국소적 계산이다.  
+
+<p align="center"><img src="{{ site.baseurl }}/images/2024/04계산그래프/2.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';"></p>  
+
+<h3>계산 그래프의 역전파</h3>  
+
+아래 그림은 y = f(x) 의 역전파를 그림으로 나타낸 것이다.  
+
+<p align="center"><img src="{{ site.baseurl }}/images/2024/04계산그래프/3.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';" width="200px"></p>  

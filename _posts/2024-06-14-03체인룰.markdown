@@ -1,0 +1,30 @@
+---
+title:  "체인룰"
+date:   2024-06-13 10:04:23
+categories: [수학]
+tags: [수학]
+---
+연쇄 법칙, 즉 체인 룰이란 합성함수의 도함수에 대한 공식이다. 함수 f가 x_0에서 미분 가능하며, 함수 g가 f(x_0)에서 미분가능하면, 아래의 식이 성립한다.  
+
+
+<p align="center"><img src="{{ site.baseurl }}/images/2024/03체인룰/1.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';"></p>  
+
+f와 g가 구간 I에서 미분가능하다면, 아래의 식이 성립한다.  
+
+<p align="center"><img src="{{ site.baseurl }}/images/2024/03체인룰/2.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';"></p>  
+
+y= f(x) , u = g(x)로 다시 쓰면, 아래의 식이 성립한다.
+
+<p align="center"><img src="{{ site.baseurl }}/images/2024/03체인룰/3.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';"></p>  
+
+역전파(back propagation)에서 나타나는 합성함수의 편미분은 일일이 계산할 필요없이 체인룰을 통해 간단히 계산할 수 있다.  
+
+다음은, 미분하는 간단한 예제들이다.  
+
+1 :  
+<p align="center"><img src="{{ site.baseurl }}/images/2024/03체인룰/4.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';"></p>  
+
+2 :  
+<p align="center"><img src="{{ site.baseurl }}/images/2024/03체인룰/5.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';"></p>  
+
+

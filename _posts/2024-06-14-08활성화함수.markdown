@@ -1,0 +1,62 @@
+---
+title:  "활성화 함수"
+date:   2024-06-13 10:04:23
+categories: [하미퍼파라미터]
+tags: [하미퍼파라미터]
+---
+딥러닝 네트워크에서 노드에 입력된 값들을 비선형 함수에 통과시킨 후 다음 레이어로 전달하는데, 이 때 사용하는 함수를 활성화 함수라고 한다.  
+
+선형 함수가 아니라 비선형 함수를 사용하는 이유는 딥러닝 모델의 레이어 층을 깊게 가져갈 수 있기 때문이다.  
+
+인공신경망에서 활성화 함수는 입력 데이터를 다음 레이어로 어떻게 출력하느냐를 결정하는 역할이기 때문에 매우 중요하다.  
+
+<h3>Sigmoid 함수</h3>  
+
+시그모이드 함수는 Logistic 함수라고 불리기도 하며, x의 값에 따라 0~1의 값을 출력하는 S자형 함수이다.  
+
+시그모이드의 정의는 아래 수식과 같다.
+
+<p align="center"><img src="{{ site.baseurl }}/images/2024/08활성화함수/1.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';"></p>  
+
+Sigmoid 함수(좌) & Sigmoid 도함수(우)
+<p align="center">
+  <img src="{{ site.baseurl }}/images/2024/08활성화함수/2.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';" width="50%"><img src="{{ site.baseurl }}/images/2024/08활성화함수/3.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';" width="50%">
+</p>  
+
+하지만 Sigmoid 함수는 음수 값을 0에 가깝게 표현하기 때문에 입력 값이 최종 레이어에서 미치는 영향이 적어지는 기울기 소실 문제(Vanishing Gradient Problem)가 발생한다.  
+
+또한, Sigmoid 함수의 중심이 0이 아닌데, 이 때문에 학습이 느려질 수 있는 단점이 있다. 한 노드에서 모든 파라미터의 미분 값은 모두 같은 부호를 같게 되는데, 같은 방향으로 update되는 과정은 학습을 지그재그 형태로 만드는 원인을 낳는다.  
+
+이러한 문제 때문에 딥러닝 실무에서는 잘 사용되지 않지만, 미분 결과가 간결하고 사용하기 쉽기 때문에 입문 단계에서 꼭 다루는 함수이다.  
+
+
+<h3>Tanh 함수</h3>  
+
+Hyperbolic Tangent Function은 쌍곡선 함수 중 하나로, Sigmoid 함수를 변형해서 얻을 수 있다.  
+
+Tanh 함수의 정의는 아래 수식과 같은데, σ(x) 는 Sigmoid 함수 식이다.  
+
+<p align="center"><img src="{{ site.baseurl }}/images/2024/08활성화함수/4.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';"></p>  
+
+Tanh 함수(좌) & Tanh 도함수(우)
+<p align="center">
+  <img src="{{ site.baseurl }}/images/2024/08활성화함수/5.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';" width="50%"><img src="{{ site.baseurl }}/images/2024/08활성화함수/6.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';" width="50%">
+</p>  
+
+tanh 함수는 함수의 중심점을 0으로 옮겨 sigmoid가 갖고 있던 최적화 과정에서 느려지는 문제를 해결했다.  
+
+하지만 미분함수에 대해 일정 값 이상에서 미분 값이 소실되는 Vanishing Gradient Problem은 여전히 남아있다.  
+
+<h3>ReLU</h3>  
+ReLU(Rectified Linear Unit, 경사함수)는 가장 많이 사용되는 활성화 함수 중 하나이다.  
+
+Sigmoid와 tanh가 갖는 Gradient Vanishing 문제를 해결하기 위한 함수이다.  
+
+ReLU의 정의는 아래와 같다.  
+
+<p align="center"><img src="{{ site.baseurl }}/images/2024/08활성화함수/7.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';"></p>  
+
+ReLU 함수 그래프  
+<p align="center"><img src="{{ site.baseurl }}/images/2024/08활성화함수/8.png" onerror="this.src='{{ site.baseurl }}/images/404img.jpg';"></p>  
+
+sigmoid, tanh 함수보다 학습이 빠르고, 연산 비용이 적고, 구현이 매우 간단하다는 특징이 있다.

@@ -1,0 +1,9 @@
+---
+title:  "torch gpu(CUDA) 설치"
+date:   2024-06-13 10:04:23
+categories: [설치]
+tags: [설치]
+---
+##### 이 글은 Windows 11 환경에서 실험, 작성되었기 때문에 다른 환경에 적용할 때는 문제가 발생할 수 있다.
+<br/>
+인공지능을 처음 공부하는 학생들이 가장 먼저 마주하는 난관 중 하나는 CUDA를 올바르게 설치하고 실행하는 것이다. CUDA(Compute Unified Device Architecture)는 NVIDIA가 개발한 병렬 컴퓨팅 플랫폼 및 프로그래밍 모델로, 개발자들이 GPU를 사용해 병렬 처리가 필요한 연산을 빠르게 처리할 수 있도록 돕는다. 딥 러닝과 같은 인공지능 기법은 이러한 CUDA의 활용 예시 중 하나로, [CUDA를 사용한 연산과 사용하지 않은 연산의 속도는 10배 이상 차이가 날 수 있다.](https://jaeyeoon.tistory.com/47){:target="_blank"}
